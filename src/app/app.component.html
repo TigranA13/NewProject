@@ -1,71 +1,118 @@
-<div class="bgded overlay" style="background-image:url(https://via.placeholder.com/1400);">
+<span *ngFor="let d of data">
+  <div class="bgded overlay" style="background-image:url(https://via.placeholder.com/1400);">
 <div class="wrapper row1">
   <header id="header" class="hoc clear">
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a routerLink="/home">Overerts</a></h1>
+      <h1><a routerLink="/home">{{d.H1}}</a></h1>
     </div>
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-        <li routerLinkActive="active"><a routerLink="/home">Home</a></li>
-        <li routerLinkActive="active"><a  routerLink="/about">About Us</a></li>
-        <li routerLinkActive="active"><a  routerLink="/gallery">Gallery</a></li>
-        <li routerLinkActive="active"><a routerLink="/services">Services</a></li>
-        <li routerLinkActive="active"><a routerLink="/pricelist">Price List</a></li>
-        <li routerLinkActive="active"><a routerLink="/contacts">Contacts</a></li>
+        <li routerLinkActive="active"><a routerLink="/home">{{d.aHome}}</a></li>
+        <li routerLinkActive="active"><a  routerLink="/about">{{d.aAboutUs}}</a></li>
+        <li routerLinkActive="active"><a  routerLink="/gallery">{{d.aGallery}}</a></li>
+        <li routerLinkActive="active"><a routerLink="/services">{{d.aServices}}</a></li>
+        <li routerLinkActive="active"><a routerLink="/pricelist">{{d.aPriceList}}</a></li>
+        <li routerLinkActive="active"><a routerLink="/contacts">{{d.aContacts}}</a></li>
       </ul>
     </nav>
     <!-- ################################################################################################ -->
   </header>
 </div>
 
+<div id="pageintro" class="hoc clear" >
+  <!-- ################################################################################################ -->
+  <div class="flexslider basicslider" >
+    <ul class="slides">
+      <li>
+        <article>
+          <p class="heading">{{d.pClassHeading1}}</p>
+          <h2 class="heading">{{d.h2ClassHeading1}}</h2>
+          <p>{{d.p1}}</p>
+          <footer>
+            <ul class="nospace inline pushright">
+              <li><a class="btn" href="#">{{d.aClassBtn1}}</a></li>
+              <li><a class="btn inverse" href="#">{{d.aClassBtn1Inverse}}</a></li>
+            </ul>
+          </footer>
+        </article>
+      </li>
+      <li>
+        <article>
+          <p class="heading">{{d.pClassHeading2}}</p>
+          <h2 class="heading">{{d.h2ClassHeading2}}</h2>
+          <p>{{d.p2}}</p>
+          <footer>
+            <ul class="nospace inline pushright">
+              <li><a class="btn" href="#">{{d.aClassBtn2}}</a></li>
+              <li><a class="btn inverse" href="#">{{d.aClassBtn2Inverse}}</a></li>
+            </ul>
+          </footer>
+        </article>
+      </li>
+      <li>
+        <article>
+          <p class="heading">{{d.pClassHeading3}}</p>
+          <h2 class="heading">{{d.h2ClassHeading3}}</h2>
+          <p>{{d.p3}}</p>
+          <footer>
+            <ul class="nospace inline pushright">
+              <li><a class="btn" href="#">{{d.aClassBtn3}}</a></li>
+              <li><a class="btn inverse" href="#">{{d.aClassBtn3Inverse}}</a></li>
+            </ul>
+          </footer>
+        </article>
+      </li>
+    </ul>
+  </div>
+  <!-- ################################################################################################ -->
+  </div>
+
   <router-outlet></router-outlet>
 </div>
-<!--------------------------------------Footer-------------------------------------->
+  <!--------------------------------------Footer-------------------------------------->
 <div class="wrapper row4">
   <footer id="footer" class="hoc clear">
     <!-- ################################################################################################ -->
     <div class="one_third first">
-      <h6 class="heading">est ut dolor tristique</h6>
-      <p>maecenas tempus vestibulum felis in efficitur sed facilisis urna metus interdum pretium mi dignissim et fusce.</p>
-      <p class="btmspace-15">sagittis tempor nullam iaculis dolor id condimentum cursus duis scelerisque ac metus amet laoreet vestibulum dictum.</p>
+      <h6 class="heading">{{d.h6_1}}</h6>
+      <p>{{d.p_1}}</p>
+      <p class="btmspace-15">{{d.pClasBtmSpace1}}</p>
       <ul class="faico clear">
-        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+        <li><a class="faicon-facebook" href={{d.aFaceBook}}><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href={{d.aTwitter}}><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href={{d.aDribbble}}><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href={{d.aLinkedIn}}><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href={{d.aGooglePluse}}><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-vk" href={{d.aVk}}><i class="fa fa-vk"></i></a></li>
       </ul>
     </div>
     <div class="one_third">
-      <h6 class="heading">luctus vestibulum magna</h6>
+      <h6 class="heading">{{d.h6Heading1}}</h6>
       <ul class="nospace linklist contact">
         <li><i class="fa fa-map-marker"></i>
           <address>
-            Street Name &amp; Number, Town, Postcode/Zip
+            {{d.address}}
           </address>
         </li>
-        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+        <li><i class="fa fa-phone"></i>{{d.phone}}</li>
+        <li><i class="fa fa-fax"></i> {{d.fax}}</li>
+        <li><i class="fa fa-envelope-o"></i> {{d.email}}</li>
       </ul>
     </div>
     <div class="one_third">
-      <h6 class="heading">velit porttitor ac euismod</h6>
+      <h6 class="heading">{{d.h6Heading2}}</h6>
       <ul class="nospace linklist">
         <li>
           <article>
-            <h2 class="nospace font-x1"><a href="#">ut porttitor sit amet</a></h2>
-            <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
-            <p class="nospace">nunc sed eget augue varius dapibus mi eget lobortis risus nunc a leo&hellip;</p>
+            <h2 class="nospace font-x1"><a href="#">{{d.h2Nospace}}</a></h2>
+            <p class="nospace">{{d.pClassNospace1}}&hellip;</p>
           </article>
         </li>
         <li>
           <article>
-            <h2 class="nospace font-x1"><a href="#">finibus commodo ex eu</a></h2>
-            <time class="font-xs block btmspace-10" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
-            <p class="nospace">pharetra nam sit amet lacus tempor ipsum finibus luctus sed fringilla&hellip;</p>
+            <h2 class="nospace font-x1"><a href="#">{{d.h2Nospace2}}</a></h2>
+            <p class="nospace">{{d.pClassNospace2}}&hellip;</p>
           </article>
         </li>
       </ul>
@@ -73,26 +120,26 @@
     <!-- ################################################################################################ -->
   </footer>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
 <div class="wrapper quicklinks">
   <nav class="hoc clear">
     <!-- ################################################################################################ -->
     <ul class="nospace">
-      <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">Shop</a></li>
+      <li><a routerLink="/home"><i class="fa fa-lg fa-home"></i></a></li>
+      <li><a routerLink="/about">{{d.aAboutUs}}</a></li>
+      <li><a routerLink="/gallery">{{d.aGallery}}</a></li>
+      <li><a routerLink="/services">{{d.aServices}}</a></li>
+      <li><a routerLink="/pricelist">{{d.aPriceList}}</a></li>
+      <li><a routerLink="/contacts">{{d.aContacts}}</a></li>
     </ul>
     <!-- ################################################################################################ -->
   </nav>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear">
     <!-- ################################################################################################ -->
@@ -101,7 +148,10 @@
     <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+<a id="backtotop" ><i class="fa fa-chevron-up"></i></a>
+
+</span>
+

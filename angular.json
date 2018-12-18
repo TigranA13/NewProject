@@ -30,13 +30,6 @@
 
             ],
             "scripts": [
-
-              "src/assets/scripts/jquery.min.js",
-              "src/assets/scripts/jquery.flexslider-min.js",
-              "src/assets/scripts/jquery.backtotop.js",
-              "src/assets/scripts/jquery.mobilemenu.js"
-
-
             ]
           },
           "configurations": {

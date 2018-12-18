@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {AppService} from './app.service';
+import {Router} from '@angular/router'
+
 
 
 
@@ -8,8 +11,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'client';
 
+  data :any = [];
+
+  constructor(private service: AppService, private router: Router ) { }
+
+  ngOnInit() {
+    this.data.push(this.service.getData());
+    
+  }
 
 }
 
