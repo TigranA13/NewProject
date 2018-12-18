@@ -23,9 +23,21 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/styles/fontawesome-4.6.3.min.css",
+              "src/assets/styles/custom.flexslider.css",
+              "src/assets/styles/framework.css",
               "src/styles.css"
+
             ],
-            "scripts": []
+            "scripts": [
+
+              "src/assets/scripts/jquery.min.js",
+              "src/assets/scripts/jquery.flexslider-min.js",
+              "src/assets/scripts/jquery.backtotop.js",
+              "src/assets/scripts/jquery.mobilemenu.js"
+
+
+            ]
           },
           "configurations": {
             "production": {
